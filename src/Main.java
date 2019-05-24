@@ -1,6 +1,12 @@
 public class Main {
+    @SuppressWarnings("all")
     public static void main(String[] args) {
-        Author author = new Author("Sandi", "Metz");
+        Author author = new Author("Sandi", "Metz") {
+            @Override
+            public String sortName() {
+                return null;
+            }
+        };
 
         author.addBook("Practical Object-Oriented Design in Ruby");
         author.addBook("99 Bottles of OOP");
